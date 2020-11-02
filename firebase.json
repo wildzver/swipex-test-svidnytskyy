@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/swipex-test-svidnytskyy",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

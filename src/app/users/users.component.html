@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="developer">
+    <img src="assets/heart.svg" alt="">
+    <p>{{'Developed with love by:' | titlecase}}
+      <br>
+      <a href="https://www.linkedin.com/in/taras-svidnytskyy/" target="_blank" title="linkedin.com">
+        <b>
+          Taras Svidnytskyy
+        </b>
+      </a>
+    </p>
+  </div>
+
+  <div class="row">
+    <app-user-card *ngFor="let user of users?.data"
+                   [user]="user"
+                   class="col-xs-12 col-sm-6 col-md-4 col-lg-4"></app-user-card>
+  </div>
+
+  <ul class="pagination justify-content-center">
+    <li *ngFor="let page of pages; let i=index"
+        class="page-item"
+        [ngClass]="{active: currentPage==(i+1)}">
+      <a class="page-link"
+         routerLink="users"
+         [queryParams]="{page: i+1}">
+        {{i + 1}}
+      </a>
+    </li>
+  </ul>
+</div>
